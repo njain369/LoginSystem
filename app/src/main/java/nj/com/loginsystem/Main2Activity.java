@@ -75,16 +75,17 @@ public class Main2Activity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            String naam1= editTextPhone.getText().toString();
-                            Intent intent = new Intent(Main2Activity.this,RegisterActivity.class);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                            intent.putExtra("phno",naam1);
-                            startActivity(intent);
-                        }
-                        else{
-                            Toast.makeText(Main2Activity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
-                        }
+
+                            if (task.isSuccessful()) {
+                                String naam1 = editTextPhone.getText().toString();
+                                Intent intent = new Intent(Main2Activity.this, RegisterActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                intent.putExtra("phno", naam1);
+                                startActivity(intent);
+                            } else {
+                                Toast.makeText(Main2Activity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            }
+
                     }
                 });
     }
