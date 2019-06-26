@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "624368730732",
+    "firebase_url": "https://loginsystem-df8d1.firebaseio.com",
+    "project_id": "loginsystem-df8d1",
+    "storage_bucket": "loginsystem-df8d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624368730732:android:7377c2811ea95c34",
+        "android_client_info": {
+          "package_name": "nj.com.loginsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624368730732-t3ecshhjlak1vtcsndplr0co26mk7b78.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "nj.com.loginsystem",
+            "certificate_hash": "5d69db4556b17a014e20cb2a7063652d25544420"
+          }
+        },
+        {
+          "client_id": "624368730732-mr6uagc6uuotn2oteteucmp9787nnml9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYfATrw8ckNZCIGR5KEI4inCsqO_goFtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624368730732-aancil3ova13fop2lmcki43bdcua70c7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
