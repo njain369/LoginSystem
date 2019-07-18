@@ -21,7 +21,7 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
-
+import nj.com.loginsystem.RegisterActivity;
 public class Main2Activity extends AppCompatActivity {
 
     private Button buttonGetVerificationCode;
@@ -59,6 +59,7 @@ public class Main2Activity extends AppCompatActivity {
                             return;
                         }
                         verifyCode(code);
+
                     }
                 });
             }
@@ -67,7 +68,8 @@ public class Main2Activity extends AppCompatActivity {
 
     private void verifyCode(String code){
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId,code);
-        signInWithCredential(credential);
+             Toast.makeText(this,"Hey i m in verify code",Toast.LENGTH_SHORT).show();
+         signInWithCredential(credential);
     }
 
     private void signInWithCredential(PhoneAuthCredential credential){
@@ -77,10 +79,11 @@ public class Main2Activity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()) {
-                                String naam1 = editTextPhone.getText().toString();
-                                Intent intent = new Intent(Main2Activity.this, RegisterActivity.class);
+
+                                String naam = editTextPhone.getText().toString();
+                                Intent intent = new Intent(Main2Activity.this,RegisterActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                intent.putExtra("phno", naam1);
+                                intent.putExtra("phno", naam);
                                 startActivity(intent);
                             } else {
                                 Toast.makeText(Main2Activity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
